@@ -16,11 +16,11 @@ mkdir -p "${APPDIR}"
 
 # Build the application
 echo "Building application..."
-# (
-#   cd build && \
-#   cmake .. && \
-#   make
-# )
+(
+  cd build && \
+  cmake .. && \
+  make
+)
 
 # Create AppDir structure
 mkdir -p "${APPDIR}/usr/bin"
