@@ -12,6 +12,7 @@ echo "Building ${APP_NAME} AppImage for ${ARCH}..."
 
 # Clean previous builds
 rm -rf "$APPDIR"
+rm -rf "$BUILD_DIR"
 mkdir -p "${APPDIR}"
 
 # Build the application
@@ -105,7 +106,7 @@ fi
 echo "Creating AppImage..."
 # VERSION="$APP_VERSION" ARCH="$ARCH" \
 # ./squashfs-root/AppRun \
-VERSION="$APP_VERSION "ARCH=$ARCH ./linuxdeploy-x86_64.AppImage \
+VERSION="$APP_VERSION" ARCH="$ARCH" ./linuxdeploy-x86_64.AppImage \
     --appdir "$APPDIR" \
     --desktop-file "$APPDIR/$APP_NAME.desktop" \
     --icon-file "$APPDIR/$APP_NAME.svg" \
